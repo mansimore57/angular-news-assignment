@@ -1,0 +1,25 @@
+<div class="home-conatiner">
+    <div class="filter-conatiner">
+      <input type="text" name="" id="" [(ngModel)]="searchedValue">
+        <select [(ngModel)]="searchedCountry">
+          <option value="">Select an option&hellip;</option>
+          <option
+            *ngFor="let key of countryKeys()"
+            [value]="key">
+              {{country[key]}}
+          </option>
+        </select>
+        <select [(ngModel)]="searchedCategory">
+          <option value="">Select an option&hellip;</option>
+          <option
+            *ngFor="let key of categoryKeys()"
+            [value]="key">
+              {{category[key]}}
+          </option>
+        </select>
+        <button class="search-button" (click)="handleSearchArticle()">Search</button>
+      </div>
+    <div class="news-container">
+        <app-news-card *ngFor="let item of allNewsArticle" [news]="item"></app-news-card>
+    </div>
+</div>

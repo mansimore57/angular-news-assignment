@@ -1,0 +1,59 @@
+
+.nav {
+    background-color: #9e959aa6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+.logo-text {
+    margin: 10px 10px 10px 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ff7300, #e6005c, #007bff, #00ff84, #ff7300);
+    background-size: 400% 400%;
+    animation: colorChange 10s infinite;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+
+
+  @keyframes colorChange {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  
+ .navbar-right-text {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.2em;
+  }
+
+  .navbar-right-text a {
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    
+    .navbar-right-text {
+      font-size: 1.8em;
+    }
+  }

@@ -1,0 +1,9 @@
+<div class="news-detail-card-info">
+    <img [src]="newsArticle.urlToImage" alt="news_image" />
+    <h2>{{ newsArticle.title }}</h2>
+    <p><b>Author: </b>{{ newsArticle.author }}</p>
+    <p>{{ newsArticle.description }}</p>
+    <p>{{newsArticle.content}}</p>
+    <p><strong>Published on:</strong> {{ newsArticle.publishedAt | date }}</p>
+    <p class="source"><b>Source:</b> {{ newsArticle.source.name }}</p>
+</div>

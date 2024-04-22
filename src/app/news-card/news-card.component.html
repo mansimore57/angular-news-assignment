@@ -1,0 +1,13 @@
+<div class="news-card">
+    <img [src]="news.urlToImage || 'https://placehold.co/'" alt="News Image">
+    <div class="news-details">
+      <h4 class="news-title" (click)="redirectToDeatil(news)">{{news.title}}</h4>
+      <p class="news-description"> {{ news.description }}</p>
+    </div>
+    <div class="bookmark-cont">
+        <div class="date-piblished"> <b>Published At</b> <br> {{news.publishedAt | date}}</div>
+        <img (click)="toggleBookMark(news)" *ngIf="!isBookmarkedPage" [src]=" !isBookmarked ? 'https://w7.pngwing.com/pngs/522/320/png-transparent-bookmark-computer-icons-bookmark-miscellaneous-ribbon-angle-thumbnail.png' : 'https://w7.pngwing.com/pngs/430/166/png-transparent-bookmark-computer-icons-bookmark-angle-rectangle-black-thumbnail.png'" alt="">
+        <!-- <img  *ngIf="false" src="https://w7.pngwing.com/pngs/430/166/png-transparent-bookmark-computer-icons-bookmark-angle-rectangle-black-thumbnail.png" alt=""> -->
+    </div>
+  </div>
+
